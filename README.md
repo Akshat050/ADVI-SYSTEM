@@ -28,12 +28,11 @@ The website includes:
 ## Screenshots
 
 ### Hero Section
-![Hero Section](image1.png)
+![Hero Section](screenshot/hero-section.png)
 
 ### Services Section
-![Services Section](image2.png)
+![Services Section](screenshot/services-section.PNG)
 
-*Add screenshots that showcase different sections of the site to give potential users a preview of the website.*
 
 ## Features
 
