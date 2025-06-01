@@ -66,22 +66,69 @@ animateElements.forEach(element => {
     observer.observe(element);
 });
 
-// Contact form handling
+// Contact Form AJAX Submission
 const contactForm = document.getElementById('contactForm');
-
-contactForm.addEventListener('submit', (e) => {
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(contactForm);
-    const data = Object.fromEntries(formData);
-    
-    // Here you would typically send the data to a server
-    console.log('Form submitted:', data);
-    
-    // Show success message (you can customize this)
-    alert('Thank you for your message! We will get back to you soon.');
-    
-    // Reset form
-    contactForm.reset();
+    const button = contactForm.querySelector('button[type="submit"]');
+    const feedback = contactForm.querySelector('.form-feedback');
+    button.disabled = true;
+    button.querySelector('.button-text').textContent = 'Sending...';
+    feedback.textContent = '';
+    feedback.style.color = '';
+
+    const formData = {
+      name: contactForm.name.value.trim(),
+      email: contactForm.email.value.trim(),
+      subject: contactForm.subject.value.trim(),
+      message: contactForm.message.value.trim(),
+    };
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        feedback.textContent = data.message || 'Message sent!';
+        feedback.style.color = '#27ae60';
+        contactForm.reset();
+      } else {
+        feedback.textContent = data.error || 'Failed to send message.';
+        feedback.style.color = '#e74c3c';
+      }
+    } catch (err) {
+      feedback.textContent = 'Network error. Please try again later.';
+      feedback.style.color = '#e74c3c';
+    }
+    button.disabled = false;
+    button.querySelector('.button-text').textContent = 'Send Message';
+  });
+}
+
+// Cookie Consent
+const cookieConsent = document.getElementById('cookieConsent');
+const acceptCookies = document.getElementById('acceptCookies');
+const customizeCookies = document.getElementById('customizeCookies');
+
+// Check if user has already made a choice
+if (!localStorage.getItem('cookieConsent')) {
+    setTimeout(() => {
+        cookieConsent.classList.add('show');
+    }, 1000);
+}
+
+acceptCookies.addEventListener('click', () => {
+    localStorage.setItem('cookieConsent', 'accepted');
+    cookieConsent.classList.remove('show');
+});
+
+customizeCookies.addEventListener('click', () => {
+    // Here you would typically show a modal with cookie preferences
+    // For now, we'll just accept all cookies
+    localStorage.setItem('cookieConsent', 'customized');
+    cookieConsent.classList.remove('show');
 });
