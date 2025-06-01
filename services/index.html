@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Advi Systems' comprehensive digital solutions including web development, SEO, cloud services, and cybersecurity.">
+    <title>Our Services - Advi Systems</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@10/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <link rel="canonical" href="https://advisystems.com/services/" />
+    <meta property="og:url" content="https://advisystems.com/services/" />
+    <meta property="og:image" content="https://advisystems.com/logo.png" />
+    <meta property="og:site_name" content="Advi Systems" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Our Services - Advi Systems" />
+    <meta name="twitter:description" content="Explore Advi Systems' comprehensive digital solutions including web development, SEO, cloud services, and cybersecurity." />
+    <meta name="twitter:image" content="https://advisystems.com/logo.png" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://advisystems.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://advisystems.com/services/"}
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What types of digital solutions do you offer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We offer web development, SEO, cloud solutions, cybersecurity, and more."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get started with Advi Systems?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Contact us through our website or call us to discuss your project needs."
+          }
+        }
+      ]
+    }
+    </script>
+    <style>
+    #preloader {position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:9999;background:#fff;display:flex;align-items:center;justify-content:center;transition:opacity 0.5s;}
+    #preloader.hidden {opacity:0;pointer-events:none;}
+    .loader {border:6px solid #f3f3f3;border-top:6px solid #003366;border-radius:50%;width:60px;height:60px;animation:spin 1s linear infinite;}
+    @keyframes spin {100%{transform:rotate(360deg);}}
+    body.dark {background:#181a1b;color:#f5f5f5;}
+    body.dark .service-card,body.dark .pricing-card,body.dark .contact-form{background:#23272b;color:#f5f5f5;}
+    body.dark .nav-links,.dropdown-menu{background:#23272b;}
+    body.dark .btn-primary{background:#E67E22;color:#fff;}
+    .btn-primary,.btn-secondary{transition:transform 0.15s cubic-bezier(.4,0,.2,1),box-shadow 0.15s;}
+    .btn-primary:active,.btn-secondary:active{transform:scale(0.96);box-shadow:0 2px 8px rgba(0,0,0,0.08);}
+    .service-card,.pricing-card{transition:box-shadow 0.2s,transform 0.2s;}
+    .service-card:hover,.pricing-card:hover{box-shadow:0 8px 32px rgba(0,51,102,0.12);transform:translateY(-4px) scale(1.02);}
+    #navbar.sticky{position:fixed;top:0;left:0;right:0;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.08);animation:slideDown 0.4s;}
+    @keyframes slideDown{from{transform:translateY(-100%);}to{transform:translateY(0);}}
+    .swiper{width:100%;padding:2rem 0;}
+    .swiper-slide{display:flex;justify-content:center;align-items:center;}
+    .nav-links { position: relative; display: flex; align-items: center; gap: 2rem; }
+    .dropdown { position: relative; }
+    .dropdown-toggle { cursor: pointer; display: flex; align-items: center; gap: 0.25rem; padding: 0.5rem 1rem; border-radius: 0.5rem; transition: background 0.2s; }
+    .dropdown-toggle:hover, .dropdown-toggle:focus { background: #f5f5f5; }
+    .dropdown-menu { opacity: 0; pointer-events: none; transform: translateY(-10px); transition: opacity 0.3s, transform 0.3s; position: absolute; top: 2.5rem; left: 0; min-width: 220px; background: #fff; box-shadow: 0 8px 32px rgba(0,0,0,0.12); border-radius: 0.75rem; z-index: 1001; flex-direction: column; padding: 0.5rem 0; animation: fadeIn 0.3s; }
+    .dropdown:hover .dropdown-menu, .dropdown:focus-within .dropdown-menu { opacity: 1; pointer-events: auto; transform: translateY(0); display: flex; }
+    .dropdown-menu a { color: #003366; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 0.375rem; font-weight: 500; transition: background 0.2s, color 0.2s; }
+    .dropdown-menu a:hover, .dropdown-menu a:focus { background: #e6f0fa; color: #E67E22; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px);} to { opacity: 1; transform: translateY(0);} }
+    .parallax-shape { position: absolute; z-index: 0; opacity: 0.08; pointer-events: none; }
+    .parallax-shape1 { top: 10%; left: 5%; width: 120px; height: 120px; background: #003366; border-radius: 50%; }
+    .parallax-shape2 { bottom: 15%; right: 8%; width: 180px; height: 180px; background: #E67E22; border-radius: 50%; }
+    .counter { font-size: 2.5rem; font-weight: 700; color: #003366; }
+    .nav-overlay { display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.4); z-index: 1000; }
+    .nav-links.active ~ .nav-overlay { display: block; }
+    @media (max-width: 900px) {
+      .nav-links { flex-direction: column; background: #fff; position: absolute; top: 100%; left: 0; right: 0; display: none; box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
+      .nav-links.active { display: flex; animation: fadeIn 0.3s; }
+      .menu-btn { display: block; }
+    }
+    </style>
+</head>
+<body>
+    <div class="parallax-shape parallax-shape1"></div>
+    <div class="parallax-shape parallax-shape2"></div>
+    <nav id="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-layer-group"></i>
+                <span>ADVI SYSTEMS</span>
+                <span class="tagline">Empowering Your Digital Future</span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">Services</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#contact">Contact</a>
+                <a href="../index.html#contact" class="btn-primary">Get Started</a>
+            </div>
+            <div class="menu-btn" id="menuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <header class="services-hero">
+        <div class="container">
+            <h1>Our Services</h1>
+            <p>Comprehensive digital solutions tailored to your business needs</p>
+            <div class="service-categories">
+                <button class="category-btn active" data-category="all">All Services</button>
+                <button class="category-btn" data-category="development">Development</button>
+                <button class="category-btn" data-category="marketing">Marketing</button>
+                <button class="category-btn" data-category="cloud">Cloud & Security</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="services-grid">
+        <div class="container">
+            <div class="services-wrapper">
+                <!-- Web Development Service -->
+                <div class="service-card" data-category="development">
+                    <div class="service-icon">
+                        <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_kkflmtur.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Custom-built, responsive websites and web applications that deliver exceptional user experiences.</p>
+                    <div class="service-features">
+                        <span>Custom Design</span>
+                        <span>Responsive</span>
+                        <span>E-commerce</span>
+                    </div>
+                    <a href="web-development.html" class="btn-secondary">Learn More</a>
+                </div>
+
+                <!-- SEO Service -->
+                <div class="service-card" data-category="marketing">
+                    <div class="service-icon">
+                        <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_ydo1amjm.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                    </div>
+                    <h3>SEO & Digital Marketing</h3>
+                    <p>Strategic optimization and marketing campaigns to increase your online visibility and drive growth.</p>
+                    <div class="service-features">
+                        <span>SEO</span>
+                        <span>PPC</span>
+                        <span>Social Media</span>
+                    </div>
+                    <a href="seo-marketing.html" class="btn-secondary">Learn More</a>
+                </div>
+
+                <!-- Cloud Services -->
+                <div class="service-card" data-category="cloud">
+                    <div class="service-icon">
+                        <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_kkflmtur.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                    </div>
+                    <h3>Cloud Solutions</h3>
+                    <p>Scalable cloud infrastructure and migration services to modernize your IT operations.</p>
+                    <div class="service-features">
+                        <span>AWS</span>
+                        <span>Azure</span>
+                        <span>Migration</span>
+                    </div>
+                    <a href="cloud-solutions.html" class="btn-secondary">Learn More</a>
+                </div>
+
+                <!-- Cybersecurity -->
+                <div class="service-card" data-category="cloud">
+                    <div class="service-icon">
+                        <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_kkflmtur.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                    </div>
+                    <h3>Cybersecurity</h3>
+                    <p>Comprehensive security solutions to protect your digital assets and ensure business continuity.</p>
+                    <div class="service-features">
+                        <span>Security Audit</span>
+                        <span>Penetration Testing</span>
+                        <span>24/7 Monitoring</span>
+                    </div>
+                    <a href="cybersecurity.html" class="btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-comparison">
+        <div class="container">
+            <h2>Choose Your Plan</h2>
+            <p>Flexible pricing options to suit your business needs</p>
+            <div class="pricing-toggle">
+                <span>Monthly</span>
+                <label class="switch">
+                    <input type="checkbox" id="billingToggle">
+                    <span class="slider round"></span>
+                </label>
+                <span>Annual <span class="save-badge">Save 20%</span></span>
+            </div>
+            <div class="pricing-grid">
+                <!-- Basic Plan -->
+                <div class="pricing-card" data-aos="fade-up">
+                    <div class="pricing-header">
+                        <h3>Basic</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="price-monthly">499</span>
+                            <span class="price-yearly" style="display:none;">4790</span>
+                            <span class="period">/<span class="price-period">month</span></span>
+                        </div>
+                        <p>Perfect for startups and small businesses</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Custom Website Design</li>
+                        <li><i class="fas fa-check"></i> Mobile Responsive</li>
+                        <li><i class="fas fa-check"></i> Basic SEO Setup</li>
+                        <li><i class="fas fa-check"></i> Contact Form</li>
+                        <li><i class="fas fa-check"></i> 5 Pages</li>
+                    </ul>
+                    <a href="../index.html#contact" class="btn-primary">Get Started</a>
+                </div>
+                <!-- Professional Plan -->
+                <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pricing-header">
+                        <div class="popular-badge">Most Popular</div>
+                        <h3>Professional</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="price-monthly">999</span>
+                            <span class="price-yearly" style="display:none;">9580</span>
+                            <span class="period">/<span class="price-period">month</span></span>
+                        </div>
+                        <p>Ideal for growing businesses</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Everything in Basic</li>
+                        <li><i class="fas fa-check"></i> Advanced SEO</li>
+                        <li><i class="fas fa-check"></i> Content Marketing</li>
+                        <li><i class="fas fa-check"></i> Social Media Integration</li>
+                        <li><i class="fas fa-check"></i> 10 Pages</li>
+                        <li><i class="fas fa-check"></i> Monthly Analytics Report</li>
+                    </ul>
+                    <a href="../index.html#contact" class="btn-primary">Get Started</a>
+                </div>
+                <!-- Enterprise Plan -->
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="price-monthly">1999</span>
+                            <span class="price-yearly" style="display:none;">19190</span>
+                            <span class="period">/<span class="price-period">month</span></span>
+                        </div>
+                        <p>For large organizations</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Everything in Professional</li>
+                        <li><i class="fas fa-check"></i> Custom Web Application</li>
+                        <li><i class="fas fa-check"></i> Cloud Infrastructure</li>
+                        <li><i class="fas fa-check"></i> 24/7 Support</li>
+                        <li><i class="fas fa-check"></i> Unlimited Pages</li>
+                        <li><i class="fas fa-check"></i> Dedicated Account Manager</li>
+                    </ul>
+                    <a href="../index.html#contact" class="btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Digital Presence?</h2>
+            <p>Let's discuss how we can help your business grow</p>
+            <a href="../index.html#contact" class="btn-primary">Get Started Today</a>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <p class="section-subtitle">Success stories from businesses we've helped transform</p>
+            <div class="swiper testimonials-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial-card" style="max-width:500px;margin:auto;background:#fff;padding:2rem;border-radius:1rem;box-shadow:0 4px 16px rgba(0,0,0,0.06);">
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left" style="color:#E67E22;font-size:1.5rem;"></i>
+                                <p>Advi Systems transformed our digital presence completely. Their team's expertise in web development and SEO helped us increase our online visibility by 200% within six months.</p>
+                            </div>
+                            <div class="testimonial-author" style="display:flex;align-items:center;gap:1rem;margin-top:1.5rem;">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Smith, CEO, TechStart Inc." style="width:48px;height:48px;border-radius:50%;object-fit:cover;">
+                                <div>
+                                    <h4 style="margin:0;font-size:1.1rem;">John Smith</h4>
+                                    <p style="margin:0;color:#888;font-size:0.95rem;">CEO, TechStart Inc.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card" style="max-width:500px;margin:auto;background:#fff;padding:2rem;border-radius:1rem;box-shadow:0 4px 16px rgba(0,0,0,0.06);">
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left" style="color:#E67E22;font-size:1.5rem;"></i>
+                                <p>The cloud migration service provided by Advi Systems was seamless. Their team's attention to detail and proactive approach ensured zero downtime during the transition.</p>
+                            </div>
+                            <div class="testimonial-author" style="display:flex;align-items:center;gap:1rem;margin-top:1.5rem;">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson, CTO, CloudFirst Solutions" style="width:48px;height:48px;border-radius:50%;object-fit:cover;">
+                                <div>
+                                    <h4 style="margin:0;font-size:1.1rem;">Sarah Johnson</h4>
+                                    <p style="margin:0;color:#888;font-size:0.95rem;">CTO, CloudFirst Solutions</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card" style="max-width:500px;margin:auto;background:#fff;padding:2rem;border-radius:1rem;box-shadow:0 4px 16px rgba(0,0,0,0.06);">
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left" style="color:#E67E22;font-size:1.5rem;"></i>
+                                <p>Working with Advi Systems has been a game-changer for our business. Their digital marketing strategies have significantly improved our lead generation and conversion rates.</p>
+                            </div>
+                            <div class="testimonial-author" style="display:flex;align-items:center;gap:1rem;margin-top:1.5rem;">
+                                <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Michael Chen, Marketing Director, GrowthLabs" style="width:48px;height:48px;border-radius:50%;object-fit:cover;">
+                                <div>
+                                    <h4 style="margin:0;font-size:1.1rem;">Michael Chen</h4>
+                                    <p style="margin:0;color:#888;font-size:0.95rem;">Marketing Director, GrowthLabs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card" style="max-width:500px;margin:auto;background:#fff;padding:2rem;border-radius:1rem;box-shadow:0 4px 16px rgba(0,0,0,0.06);animation:fadeInUp 1s;">
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left" style="color:#E67E22;font-size:1.5rem;"></i>
+                                <p>We partnered with Advi Systems for a full website redesign and couldn't be happier. The animations and user experience are world-class, and our customers love the new look!</p>
+                            </div>
+                            <div class="testimonial-author" style="display:flex;align-items:center;gap:1rem;margin-top:1.5rem;">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya Patel, Head of Digital, RetailX" style="width:48px;height:48px;border-radius:50%;object-fit:cover;">
+                                <div>
+                                    <h4 style="margin:0;font-size:1.1rem;">Priya Patel</h4>
+                                    <p style="margin:0;color:#888;font-size:0.95rem;">Head of Digital, RetailX</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card" style="max-width:500px;margin:auto;background:#fff;padding:2rem;border-radius:1rem;box-shadow:0 4px 16px rgba(0,0,0,0.06);animation:fadeInUp 1.2s;">
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left" style="color:#E67E22;font-size:1.5rem;"></i>
+                                <p>Advi Systems' cybersecurity team gave us peace of mind. Their proactive monitoring and quick response have protected our business from several threats already.</p>
+                            </div>
+                            <div class="testimonial-author" style="display:flex;align-items:center;gap:1rem;margin-top:1.5rem;">
+                                <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="David Kim, COO, FinSecure" style="width:48px;height:48px;border-radius:50%;object-fit:cover;">
+                                <div>
+                                    <h4 style="margin:0;font-size:1.1rem;">David Kim</h4>
+                                    <p style="margin:0;color:#888;font-size:0.95rem;">COO, FinSecure</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-layer-group"></i>
+                    <span>ADVI Systems</span>
+                </div>
+                <p>&copy; 2024 ADVI Systems. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="nav-overlay"></div>
+    <script src="../script.js"></script>
+    <script src="services.js"></script>
+    <script src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+        window.addEventListener('DOMContentLoaded',()=>{
+          // Animated Counters (only when visible)
+          const counters = document.querySelectorAll('.counter');
+          const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+              if(entry.isIntersecting) {
+                const counter = entry.target;
+                const target = +counter.getAttribute('data-count');
+                let count = 0;
+                const inc = Math.ceil(target/100);
+                const update = () => {
+                  if(count < target) {
+                    count += inc;
+                    counter.innerText = count;
+                    setTimeout(update, 20);
+                  } else {
+                    counter.innerText = target;
+                  }
+                };
+                update();
+                observer.unobserve(counter);
+              }
+            });
+          }, { threshold: 0.5 });
+          counters.forEach(counter => observer.observe(counter));
+
+          // GSAP Section Reveal with Stagger
+          gsap.utils.toArray('section, .service-card, .testimonial-card').forEach((el,i)=>{
+            gsap.from(el,{scrollTrigger:{trigger:el,start:'top 80%'},opacity:0,y:40,scale:0.98,duration:0.8,delay:i*0.08,ease:'power2.out'});
+          });
+          document.querySelectorAll('.counter').forEach(counter=>{
+            const update=()=>{
+              const target=+counter.getAttribute('data-count');
+              let count=+counter.innerText;
+              const inc=Math.ceil(target/100);
+              if(count<target){counter.innerText=count+inc;setTimeout(update,20);}else{counter.innerText=target;}
+            };
+            update();
+          });
+        });
+        window.addEventListener('scroll',()=>{
+          const nav=document.getElementById('navbar');
+          if(window.scrollY>40){nav.classList.add('sticky');}else{nav.classList.remove('sticky');}
+        });
+        const menuBtn=document.getElementById('menuBtn');
+        const navLinks=document.getElementById('navLinks');
+        const navOverlay=document.querySelector('.nav-overlay');
+        menuBtn.addEventListener('click',()=>{navLinks.classList.toggle('active');navOverlay.classList.toggle('active');});
+        navOverlay.addEventListener('click',()=>{navLinks.classList.remove('active');navOverlay.classList.remove('active');});
+        window.addEventListener('scroll',()=>{
+          document.querySelector('.parallax-shape1').style.transform=`translateY(${window.scrollY*0.2}px) scale(1.1)`;
+          document.querySelector('.parallax-shape2').style.transform=`translateY(-${window.scrollY*0.15}px) scale(1.05)`;
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+          new Swiper('.testimonials-swiper', {
+            loop: true,
+            slidesPerView: 2,
+            spaceBetween: 32,
+            centeredSlides: true,
+            autoplay: { delay: 3500, disableOnInteraction: false },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+            breakpoints: {
+              0: { slidesPerView: 1 },
+              900: { slidesPerView: 2 }
+            }
+          });
+        });
+    </script>
+</body>
+</html> 
