@@ -132,3 +132,211 @@ customizeCookies.addEventListener('click', () => {
     localStorage.setItem('cookieConsent', 'customized');
     cookieConsent.classList.remove('show');
 });
+
+// Hero Section Animations
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize GSAP animations
+    const heroTimeline = gsap.timeline({
+        defaults: { ease: 'power3.out' }
+    });
+
+    // Animate hero content
+    heroTimeline
+        .to('.hero h1 .line', {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            stagger: 0.2
+        })
+        .to('.hero p', {
+            opacity: 1,
+            y: 0,
+            duration: 1
+        }, '-=0.5')
+        .to('.hero-buttons', {
+            opacity: 1,
+            y: 0,
+            duration: 1
+        }, '-=0.5');
+
+    // Parallax effect for shapes
+    gsap.to('.shape1', {
+        y: '20%',
+        x: '10%',
+        duration: 2,
+        repeat: -1,
+        yoyo: true,
+        ease: 'sine.inOut'
+    });
+
+    gsap.to('.shape2', {
+        y: '-20%',
+        x: '-10%',
+        duration: 2.5,
+        repeat: -1,
+        yoyo: true,
+        ease: 'sine.inOut'
+    });
+
+    gsap.to('.shape3', {
+        scale: 1.2,
+        duration: 2,
+        repeat: -1,
+        yoyo: true,
+        ease: 'sine.inOut'
+    });
+
+    // Floating cards animation
+    gsap.to('.card1', {
+        y: '20px',
+        rotation: 5,
+        duration: 2,
+        repeat: -1,
+        yoyo: true,
+        ease: 'sine.inOut'
+    });
+
+    gsap.to('.card2', {
+        y: '-20px',
+        rotation: -5,
+        duration: 2.5,
+        repeat: -1,
+        yoyo: true,
+        ease: 'sine.inOut'
+    });
+
+    // Parallax effect for hero image
+    window.addEventListener('mousemove', (e) => {
+        const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
+        const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
+
+        gsap.to('.parallax-image', {
+            rotationY: moveX,
+            rotationX: -moveY,
+            duration: 1,
+            ease: 'power2.out'
+        });
+    });
+});
+
+// Service Cards 3D Tilt Effect
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.service-card');
+    
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / 10;
+            const rotateY = (centerX - x) / 10;
+            
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+        });
+    });
+    
+    // Scroll Animation for Service Cards
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+    
+    cards.forEach(card => {
+        observer.observe(card);
+    });
+});
+
+// Initialize Testimonials Slider
+document.addEventListener('DOMContentLoaded', function() {
+    const testimonialsSwiper = new Swiper('.testimonials-swiper', {
+        effect: 'fade',
+        speed: 1000,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        on: {
+            slideChangeTransitionStart: function() {
+                // Reset animations for the new slide
+                const activeSlide = this.slides[this.activeIndex];
+                const elements = activeSlide.querySelectorAll('.quote-icon, .testimonial-content p, .author-image, .author-info');
+                
+                elements.forEach(el => {
+                    el.style.animation = 'none';
+                    el.offsetHeight; // Trigger reflow
+                    el.style.animation = null;
+                });
+            }
+        }
+    });
+
+    // Profile Image Popup
+    const authorImages = document.querySelectorAll('.author-image');
+    authorImages.forEach(image => {
+        image.addEventListener('click', function() {
+            const imgSrc = this.querySelector('img').src;
+            const authorName = this.nextElementSibling.querySelector('h4').textContent;
+            const authorTitle = this.nextElementSibling.querySelector('p').textContent;
+            
+            // Create popup
+            const popup = document.createElement('div');
+            popup.className = 'profile-popup';
+            popup.innerHTML = `
+                <div class="popup-content">
+                    <button class="close-popup">&times;</button>
+                    <div class="popup-image">
+                        <img src="${imgSrc}" alt="${authorName}">
+                    </div>
+                    <div class="popup-info">
+                        <h3>${authorName}</h3>
+                        <p>${authorTitle}</p>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(popup);
+            
+            // Add animation class
+            setTimeout(() => popup.classList.add('active'), 10);
+            
+            // Close popup
+            popup.querySelector('.close-popup').addEventListener('click', () => {
+                popup.classList.remove('active');
+                setTimeout(() => popup.remove(), 300);
+            });
+            
+            popup.addEventListener('click', (e) => {
+                if (e.target === popup) {
+                    popup.classList.remove('active');
+                    setTimeout(() => popup.remove(), 300);
+                }
+            });
+        });
+    });
+});

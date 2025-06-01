@@ -187,19 +187,40 @@
     </nav>
 
     <header class="hero">
+        <div class="animated-gradient"></div>
+        <div class="parallax-shapes">
+            <div class="shape shape1"></div>
+            <div class="shape shape2"></div>
+            <div class="shape shape3"></div>
+        </div>
         <div class="container">
             <div class="hero-content">
-                <h1>Empowering Your <span class="gradient-text">Digital Future</span></h1>
-                <p>We guide businesses through their digital transformation journey with innovative solutions, 
+                <h1 class="animate-text">
+                    <span class="line">Empowering Your</span>
+                    <span class="line gradient-text">Digital Future</span>
+                </h1>
+                <p class="animate-text">We guide businesses through their digital transformation journey with innovative solutions, 
                    expert consulting, and cutting-edge technology. Your success is our mission.</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn-primary">Start Your Journey <i class="fas fa-arrow-right"></i></a>
+                <div class="hero-buttons animate-text">
+                    <a href="#contact" class="btn-primary">
+                        <span>Start Your Journey</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                     <a href="#services" class="btn-secondary">Explore Solutions</a>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80" 
-                     alt="Team collaborating on digital transformation solutions">
+                <div class="image-wrapper">
+                    <img src="images/hero-image.png" alt="Digital Transformation" class="parallax-image">
+                    <div class="floating-card card1">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Growth Analytics</span>
+                    </div>
+                    <div class="floating-card card2">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Secure Solutions</span>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -210,41 +231,100 @@
             <p class="section-subtitle">Comprehensive digital solutions to power your business growth</p>
             
             <div class="services-grid">
-                <div class="service-card" data-aos="fade-up">
-                    <i class="fas fa-laptop-code"></i>
-                    <h3>Web Development</h3>
-                    <p>Custom-built, responsive websites and web applications that deliver exceptional user experiences.</p>
-                    <a href="services/index.html#development" class="btn-secondary">Learn More</a>
+                <div class="service-card" data-tilt>
+                    <div class="card-content">
+                        <div class="icon-wrapper">
+                            <svg class="service-icon" viewBox="0 0 24 24" width="48" height="48">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Web Development</h3>
+                        <p>Custom-built, responsive websites and web applications that deliver exceptional user experiences.</p>
+                        <a href="services/index.html#development" class="btn-secondary">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                    <i class="fas fa-search"></i>
-                    <h3>SEO & Digital Marketing</h3>
-                    <p>Strategic optimization and marketing campaigns to increase your online visibility and drive growth.</p>
-                    <a href="services/index.html#marketing" class="btn-secondary">Learn More</a>
+
+                <div class="service-card" data-tilt>
+                    <div class="card-content">
+                        <div class="icon-wrapper">
+                            <svg class="service-icon" viewBox="0 0 24 24" width="48" height="48">
+                                <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>SEO & Digital Marketing</h3>
+                        <p>Strategic optimization and marketing campaigns to increase your online visibility and drive growth.</p>
+                        <a href="services/index.html#marketing" class="btn-secondary">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                    <i class="fas fa-cloud"></i>
-                    <h3>Cloud Solutions</h3>
-                    <p>Scalable cloud infrastructure and migration services to modernize your IT operations.</p>
-                    <a href="services/index.html#cloud" class="btn-secondary">Learn More</a>
+
+                <div class="service-card" data-tilt>
+                    <div class="card-content">
+                        <div class="icon-wrapper">
+                            <svg class="service-icon" viewBox="0 0 24 24" width="48" height="48">
+                                <path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Cloud Solutions</h3>
+                        <p>Scalable cloud infrastructure and migration services to modernize your IT operations.</p>
+                        <a href="services/index.html#cloud" class="btn-secondary">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Cybersecurity</h3>
-                    <p>Comprehensive security solutions to protect your digital assets and ensure business continuity.</p>
-                    <a href="services/index.html#cloud" class="btn-secondary">Learn More</a>
+
+                <div class="service-card" data-tilt>
+                    <div class="card-content">
+                        <div class="icon-wrapper">
+                            <svg class="service-icon" viewBox="0 0 24 24" width="48" height="48">
+                                <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Cybersecurity</h3>
+                        <p>Comprehensive security solutions to protect your digital assets and ensure business continuity.</p>
+                        <a href="services/index.html#cloud" class="btn-secondary">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Digital Analytics</h3>
-                    <p>Data-driven insights and analytics to optimize your digital performance and ROI.</p>
-                    <a href="services/index.html#marketing" class="btn-secondary">Learn More</a>
+
+                <div class="service-card" data-tilt>
+                    <div class="card-content">
+                        <div class="icon-wrapper">
+                            <svg class="service-icon" viewBox="0 0 24 24" width="48" height="48">
+                                <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Digital Analytics</h3>
+                        <p>Data-driven insights and analytics to optimize your digital performance and ROI.</p>
+                        <a href="services/index.html#marketing" class="btn-secondary">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
-                    <i class="fas fa-users"></i>
-                    <h3>IT Consulting</h3>
-                    <p>Expert guidance and strategic planning to align technology with your business goals.</p>
-                    <a href="services/index.html#development" class="btn-secondary">Learn More</a>
+
+                <div class="service-card" data-tilt>
+                    <div class="card-content">
+                        <div class="icon-wrapper">
+                            <svg class="service-icon" viewBox="0 0 24 24" width="48" height="48">
+                                <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>IT Consulting</h3>
+                        <p>Expert guidance and strategic planning to align technology with your business goals.</p>
+                        <a href="services/index.html#development" class="btn-secondary">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -254,87 +334,90 @@
         <div class="container">
             <h2 class="section-title">What Our Clients Say</h2>
             <p class="section-subtitle">Success stories from businesses we've helped transform</p>
-            <div class="swiper testimonials-swiper" style="padding-bottom:2rem;">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="testimonial-card" style="max-width:400px;margin:0 1rem;background:#fff;padding:2rem;border-radius:1rem;box-shadow:0 4px 16px rgba(0,0,0,0.06);">
-                            <div class="testimonial-content">
-                                <i class="fas fa-quote-left" style="color:#E67E22;font-size:1.5rem;"></i>
-                                <p>Advi Systems transformed our digital presence completely. Their team's expertise in web development and SEO helped us increase our online visibility by 200% within six months.</p>
+            
+            <div class="testimonials-slider">
+                <div class="swiper testimonials-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-content">
+                                    <div class="quote-icon">
+                                        <svg viewBox="0 0 24 24" width="32" height="32">
+                                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                    <p>Advi Systems transformed our digital presence completely. Their team's expertise in web development and SEO helped us increase our online visibility by 200% within six months.</p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="author-image">
+                                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Smith" loading="lazy">
+                                        <div class="image-overlay">
+                                            <span>View Profile</span>
+                                        </div>
+                                    </div>
+                                    <div class="author-info">
+                                        <h4>John Smith</h4>
+                                        <p>CEO, TechStart Inc.</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="testimonial-author" style="display:flex;align-items:center;gap:1rem;margin-top:1.5rem;">
-                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Smith" style="width:48px;height:48px;border-radius:50%;object-fit:cover;">
-                                <div>
-                                    <h4 style="margin:0;font-size:1.1rem;">John Smith</h4>
-                                    <p style="margin:0;color:#888;font-size:0.95rem;">CEO, TechStart Inc.</p>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-content">
+                                    <div class="quote-icon">
+                                        <svg viewBox="0 0 24 24" width="32" height="32">
+                                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                    <p>The cloud migration service provided by Advi Systems was seamless. Their team's attention to detail and proactive approach ensured zero downtime during the transition.</p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="author-image">
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson" loading="lazy">
+                                        <div class="image-overlay">
+                                            <span>View Profile</span>
+                                        </div>
+                                    </div>
+                                    <div class="author-info">
+                                        <h4>Sarah Johnson</h4>
+                                        <p>CTO, CloudFirst Solutions</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-content">
+                                    <div class="quote-icon">
+                                        <svg viewBox="0 0 24 24" width="32" height="32">
+                                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                    <p>Working with Advi Systems has been a game-changer for our business. Their digital marketing strategies have significantly improved our lead generation and conversion rates.</p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="author-image">
+                                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Michael Chen" loading="lazy">
+                                        <div class="image-overlay">
+                                            <span>View Profile</span>
+                                        </div>
+                                    </div>
+                                    <div class="author-info">
+                                        <h4>Michael Chen</h4>
+                                        <p>Marketing Director, GrowthLabs</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="testimonial-card" style="max-width:400px;margin:0 1rem;background:#fff;padding:2rem;border-radius:1rem;box-shadow:0 4px 16px rgba(0,0,0,0.06);">
-                            <div class="testimonial-content">
-                                <i class="fas fa-quote-left" style="color:#E67E22;font-size:1.5rem;"></i>
-                                <p>The cloud migration service provided by Advi Systems was seamless. Their team's attention to detail and proactive approach ensured zero downtime during the transition.</p>
-                            </div>
-                            <div class="testimonial-author" style="display:flex;align-items:center;gap:1rem;margin-top:1.5rem;">
-                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson" style="width:48px;height:48px;border-radius:50%;object-fit:cover;">
-                                <div>
-                                    <h4 style="margin:0;font-size:1.1rem;">Sarah Johnson</h4>
-                                    <p style="margin:0;color:#888;font-size:0.95rem;">CTO, CloudFirst Solutions</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="testimonial-card" style="max-width:400px;margin:0 1rem;background:#fff;padding:2rem;border-radius:1rem;box-shadow:0 4px 16px rgba(0,0,0,0.06);">
-                            <div class="testimonial-content">
-                                <i class="fas fa-quote-left" style="color:#E67E22;font-size:1.5rem;"></i>
-                                <p>Working with Advi Systems has been a game-changer for our business. Their digital marketing strategies have significantly improved our lead generation and conversion rates.</p>
-                            </div>
-                            <div class="testimonial-author" style="display:flex;align-items:center;gap:1rem;margin-top:1.5rem;">
-                                <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Michael Chen" style="width:48px;height:48px;border-radius:50%;object-fit:cover;">
-                                <div>
-                                    <h4 style="margin:0;font-size:1.1rem;">Michael Chen</h4>
-                                    <p style="margin:0;color:#888;font-size:0.95rem;">Marketing Director, GrowthLabs</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="testimonial-card" style="max-width:400px;margin:0 1rem;background:#fff;padding:2rem;border-radius:1rem;box-shadow:0 4px 16px rgba(0,0,0,0.06);">
-                            <div class="testimonial-content">
-                                <i class="fas fa-quote-left" style="color:#E67E22;font-size:1.5rem;"></i>
-                                <p>We partnered with Advi Systems for a full website redesign and couldn't be happier. The animations and user experience are world-class, and our customers love the new look!</p>
-                            </div>
-                            <div class="testimonial-author" style="display:flex;align-items:center;gap:1rem;margin-top:1.5rem;">
-                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya Patel" style="width:48px;height:48px;border-radius:50%;object-fit:cover;">
-                                <div>
-                                    <h4 style="margin:0;font-size:1.1rem;">Priya Patel</h4>
-                                    <p style="margin:0;color:#888;font-size:0.95rem;">Head of Digital, RetailX</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="testimonial-card" style="max-width:400px;margin:0 1rem;background:#fff;padding:2rem;border-radius:1rem;box-shadow:0 4px 16px rgba(0,0,0,0.06);">
-                            <div class="testimonial-content">
-                                <i class="fas fa-quote-left" style="color:#E67E22;font-size:1.5rem;"></i>
-                                <p>Advi Systems' cybersecurity team gave us peace of mind. Their proactive monitoring and quick response have protected our business from several threats already.</p>
-                            </div>
-                            <div class="testimonial-author" style="display:flex;align-items:center;gap:1rem;margin-top:1.5rem;">
-                                <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="David Kim" style="width:48px;height:48px;border-radius:50%;object-fit:cover;">
-                                <div>
-                                    <h4 style="margin:0;font-size:1.1rem;">David Kim</h4>
-                                    <p style="margin:0;color:#888;font-size:0.95rem;">COO, FinSecure</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
             </div>
         </div>
     </section>
