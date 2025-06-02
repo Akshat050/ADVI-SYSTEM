@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explore Advi Systems' comprehensive digital solutions including web development, SEO, cloud services, and cybersecurity.">
     <title>Our Services - Advi Systems</title>
+    
     <link rel="stylesheet" href="../styles.css">
+    
     <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="main.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@10/swiper-bundle.min.css" />
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -56,6 +60,9 @@
       ]
     }
     </script>
+    <style>
+        .service-card, .service-card * { color: #222 !important; background: #fff !important; opacity: 1 !important; }
+      </style>
     <style>
     #preloader {position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:9999;background:#fff;display:flex;align-items:center;justify-content:center;transition:opacity 0.5s;}
     #preloader.hidden {opacity:0;pointer-events:none;}
@@ -120,13 +127,13 @@
 
     <header class="services-hero">
         <div class="container">
-            <h1>Our Services</h1>
-            <p>Comprehensive digital solutions tailored to your business needs</p>
+            <h1>Innovate. Accelerate. Dominate.</h1>
+            <p>Next-generation digital services to future-proof your business and ignite growth.</p>
             <div class="service-categories">
-                <button class="category-btn active" data-category="all">All Services</button>
-                <button class="category-btn" data-category="development">Development</button>
-                <button class="category-btn" data-category="marketing">Marketing</button>
-                <button class="category-btn" data-category="cloud">Cloud & Security</button>
+                <button class="category-btn active" data-category="all">All Solutions</button>
+                <button class="category-btn" data-category="development">Build</button>
+                <button class="category-btn" data-category="marketing">Grow</button>
+                <button class="category-btn" data-category="cloud">Secure & Scale</button>
             </div>
         </div>
     </header>
@@ -135,63 +142,87 @@
         <div class="container">
             <div class="services-wrapper">
                 <!-- Web Development Service -->
-                <div class="service-card" data-category="development">
-                    <div class="service-icon">
-                        <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_kkflmtur.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                <div class="service-card" id="development" data-category="development">
+                    <div class="card-content">
+                        <div class="icon-wrapper">
+                            <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_kkflmtur.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                        </div>
+                        <div class="stat-badge">+300% Traffic</div>
+                        <h3>Web Experiences That Wow</h3>
+                        <p>Stunning, lightning-fast websites and apps engineered for impact, engagement, and conversion.</p>
+                        <p class="client-value">Turn visitors into loyal customers with seamless, beautiful digital journeys.</p>
+                        <div class="service-features">
+                            <span>Bespoke UI/UX</span>
+                            <span>PWAs</span>
+                            <span>Headless & JAMstack</span>
+                        </div>
+                        <a href="../index.html#contact" class="btn-secondary">Contact Us</a>
+                        <div class="we-solve">We solve: Slow sites, low conversions, poor mobile UX.</div>
+                        <div class="testimonial-reveal">“ADVI's web team delivered a site that doubled our leads in 3 months!”</div>
                     </div>
-                    <h3>Web Development</h3>
-                    <p>Custom-built, responsive websites and web applications that deliver exceptional user experiences.</p>
-                    <div class="service-features">
-                        <span>Custom Design</span>
-                        <span>Responsive</span>
-                        <span>E-commerce</span>
-                    </div>
-                    <a href="web-development.html" class="btn-secondary">Learn More</a>
                 </div>
 
                 <!-- SEO Service -->
-                <div class="service-card" data-category="marketing">
-                    <div class="service-icon">
-                        <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_ydo1amjm.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                <div class="service-card" id="marketing" data-category="marketing">
+                    <div class="card-content">
+                        <div class="icon-wrapper">
+                            <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_ydo1amjm.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                        </div>
+                        <div class="stat-badge">#1 on Google</div>
+                        <h3>Digital Growth Engine</h3>
+                        <p>AI-powered SEO, viral campaigns, and data-driven marketing to put your brand everywhere it matters.</p>
+                        <p class="client-value">Grow your audience and revenue with strategies proven to deliver measurable results.</p>
+                        <div class="service-features">
+                            <span>AI SEO</span>
+                            <span>Omnichannel</span>
+                            <span>Conversion</span>
+                        </div>
+                        <a href="../index.html#contact" class="btn-secondary">Contact Us</a>
+                        <div class="we-solve">We solve: Invisible brands, stagnant traffic, wasted ad spend.</div>
+                        <div class="testimonial-reveal">“We saw a 5x ROI on our digital campaigns with ADVI.”</div>
                     </div>
-                    <h3>SEO & Digital Marketing</h3>
-                    <p>Strategic optimization and marketing campaigns to increase your online visibility and drive growth.</p>
-                    <div class="service-features">
-                        <span>SEO</span>
-                        <span>PPC</span>
-                        <span>Social Media</span>
-                    </div>
-                    <a href="seo-marketing.html" class="btn-secondary">Learn More</a>
                 </div>
 
                 <!-- Cloud Services -->
-                <div class="service-card" data-category="cloud">
-                    <div class="service-icon">
-                        <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_kkflmtur.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                <div class="service-card" id="cloud" data-category="cloud">
+                    <div class="card-content">
+                        <div class="icon-wrapper">
+                            <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_2ks3pjua.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                        </div>
+                        <div class="stat-badge">99.99% Uptime</div>
+                        <h3>Cloud, Unleashed</h3>
+                        <p>Seamless cloud migration, automation, and security—unlocking agility and innovation at scale.</p>
+                        <p class="client-value">Modernize your business with secure, scalable, and cost-effective cloud solutions.</p>
+                        <div class="service-features">
+                            <span>Zero-Downtime</span>
+                            <span>Automation</span>
+                            <span>Security</span>
+                        </div>
+                        <a href="../index.html#contact" class="btn-secondary">Contact Us</a>
+                        <div class="we-solve">We solve: Downtime, scaling headaches, cloud security risks.</div>
+                        <div class="testimonial-reveal">“Migration was flawless—no downtime, no stress!”</div>
                     </div>
-                    <h3>Cloud Solutions</h3>
-                    <p>Scalable cloud infrastructure and migration services to modernize your IT operations.</p>
-                    <div class="service-features">
-                        <span>AWS</span>
-                        <span>Azure</span>
-                        <span>Migration</span>
-                    </div>
-                    <a href="cloud-solutions.html" class="btn-secondary">Learn More</a>
                 </div>
 
                 <!-- Cybersecurity -->
-                <div class="service-card" data-category="cloud">
-                    <div class="service-icon">
-                        <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_kkflmtur.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                <div class="service-card" id="cybersecurity" data-category="cloud">
+                    <div class="card-content">
+                        <div class="icon-wrapper">
+                            <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_2glqweqs.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                        </div>
+                        <div class="stat-badge">24/7 Protection</div>
+                        <h3>Cyber Defense Redefined</h3>
+                        <p>Proactive, AI-driven security to safeguard your business from evolving threats—24/7, 365.</p>
+                        <p class="client-value">Protect your reputation and operations with always-on, intelligent cyber defense.</p>
+                        <div class="service-features">
+                            <span>AI Threats</span>
+                            <span>Pen Testing</span>
+                            <span>Real-Time</span>
+                        </div>
+                        <a href="../index.html#contact" class="btn-secondary">Contact Us</a>
+                        <div class="we-solve">We solve: Data breaches, ransomware, compliance worries.</div>
+                        <div class="testimonial-reveal">“ADVI's security team caught threats before we even noticed!”</div>
                     </div>
-                    <h3>Cybersecurity</h3>
-                    <p>Comprehensive security solutions to protect your digital assets and ensure business continuity.</p>
-                    <div class="service-features">
-                        <span>Security Audit</span>
-                        <span>Penetration Testing</span>
-                        <span>24/7 Monitoring</span>
-                    </div>
-                    <a href="cybersecurity.html" class="btn-secondary">Learn More</a>
                 </div>
             </div>
         </div>
@@ -282,97 +313,138 @@
 
     <section class="cta-section">
         <div class="container">
-            <h2>Ready to Transform Your Digital Presence?</h2>
-            <p>Let's discuss how we can help your business grow</p>
+            <h2>Ready to disrupt your industry?</h2>
+            <p>Let's build the future together. Partner with ADVI Systems and unlock your next level of digital success.</p>
             <a href="../index.html#contact" class="btn-primary">Get Started Today</a>
         </div>
     </section>
 
-    <section class="testimonials-section">
+    <section id="testimonials" class="testimonials">
         <div class="container">
-            <h2 class="section-title">What Our Clients Say</h2>
-            <p class="section-subtitle">Success stories from businesses we've helped transform</p>
-            <div class="swiper testimonials-swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="testimonial-card" style="max-width:500px;margin:auto;background:#fff;padding:2rem;border-radius:1rem;box-shadow:0 4px 16px rgba(0,0,0,0.06);">
-                            <div class="testimonial-content">
-                                <i class="fas fa-quote-left" style="color:#E67E22;font-size:1.5rem;"></i>
-                                <p>Advi Systems transformed our digital presence completely. Their team's expertise in web development and SEO helped us increase our online visibility by 200% within six months.</p>
+            <h2 class="section-title">Client Success Stories</h2>
+            <p class="section-subtitle">Real results from businesses we've helped transform</p>
+            
+            <div class="testimonials-slider">
+                <div class="swiper testimonials-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-content">
+                                    <div class="quote-icon">
+                                        <svg viewBox="0 0 24 24" width="32" height="32">
+                                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                    <p>Advi Systems' web development team delivered a stunning, high-performance website that perfectly captures our brand identity. The attention to detail and user experience is exceptional.</p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="author-image">
+                                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya Patel" loading="lazy">
+                                        <div class="image-overlay">
+                                            <span>View Profile</span>
+                                        </div>
+                                    </div>
+                                    <div class="author-info">
+                                        <h4>Priya Patel</h4>
+                                        <p>Head of Digital, RetailX</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="testimonial-author" style="display:flex;align-items:center;gap:1rem;margin-top:1.5rem;">
-                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Smith, CEO, TechStart Inc." style="width:48px;height:48px;border-radius:50%;object-fit:cover;">
-                                <div>
-                                    <h4 style="margin:0;font-size:1.1rem;">John Smith</h4>
-                                    <p style="margin:0;color:#888;font-size:0.95rem;">CEO, TechStart Inc.</p>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-content">
+                                    <div class="quote-icon">
+                                        <svg viewBox="0 0 24 24" width="32" height="32">
+                                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                    <p>The SEO and digital marketing strategies implemented by Advi Systems have transformed our online presence. Our organic traffic has increased by 300% in just six months.</p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="author-image">
+                                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Michael Chen" loading="lazy">
+                                        <div class="image-overlay">
+                                            <span>View Profile</span>
+                                        </div>
+                                    </div>
+                                    <div class="author-info">
+                                        <h4>Michael Chen</h4>
+                                        <p>Marketing Director, GrowthLabs</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-content">
+                                    <div class="quote-icon">
+                                        <svg viewBox="0 0 24 24" width="32" height="32">
+                                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                    <p>Our cloud migration with Advi Systems was seamless. Their team's expertise in cloud architecture and security ensured a smooth transition with zero downtime.</p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="author-image">
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson" loading="lazy">
+                                        <div class="image-overlay">
+                                            <span>View Profile</span>
+                                        </div>
+                                    </div>
+                                    <div class="author-info">
+                                        <h4>Sarah Johnson</h4>
+                                        <p>CTO, CloudFirst Solutions</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-content">
+                                    <div class="quote-icon">
+                                        <svg viewBox="0 0 24 24" width="32" height="32">
+                                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                    <p>Advi Systems' cybersecurity team has been instrumental in protecting our business. Their proactive monitoring and quick response have prevented several potential threats.</p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="author-image">
+                                        <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="David Kim" loading="lazy">
+                                        <div class="image-overlay">
+                                            <span>View Profile</span>
+                                        </div>
+                                    </div>
+                                    <div class="author-info">
+                                        <h4>David Kim</h4>
+                                        <p>COO, FinSecure</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="testimonial-card" style="max-width:500px;margin:auto;background:#fff;padding:2rem;border-radius:1rem;box-shadow:0 4px 16px rgba(0,0,0,0.06);">
-                            <div class="testimonial-content">
-                                <i class="fas fa-quote-left" style="color:#E67E22;font-size:1.5rem;"></i>
-                                <p>The cloud migration service provided by Advi Systems was seamless. Their team's attention to detail and proactive approach ensured zero downtime during the transition.</p>
-                            </div>
-                            <div class="testimonial-author" style="display:flex;align-items:center;gap:1rem;margin-top:1.5rem;">
-                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson, CTO, CloudFirst Solutions" style="width:48px;height:48px;border-radius:50%;object-fit:cover;">
-                                <div>
-                                    <h4 style="margin:0;font-size:1.1rem;">Sarah Johnson</h4>
-                                    <p style="margin:0;color:#888;font-size:0.95rem;">CTO, CloudFirst Solutions</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="testimonial-card" style="max-width:500px;margin:auto;background:#fff;padding:2rem;border-radius:1rem;box-shadow:0 4px 16px rgba(0,0,0,0.06);">
-                            <div class="testimonial-content">
-                                <i class="fas fa-quote-left" style="color:#E67E22;font-size:1.5rem;"></i>
-                                <p>Working with Advi Systems has been a game-changer for our business. Their digital marketing strategies have significantly improved our lead generation and conversion rates.</p>
-                            </div>
-                            <div class="testimonial-author" style="display:flex;align-items:center;gap:1rem;margin-top:1.5rem;">
-                                <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Michael Chen, Marketing Director, GrowthLabs" style="width:48px;height:48px;border-radius:50%;object-fit:cover;">
-                                <div>
-                                    <h4 style="margin:0;font-size:1.1rem;">Michael Chen</h4>
-                                    <p style="margin:0;color:#888;font-size:0.95rem;">Marketing Director, GrowthLabs</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="testimonial-card" style="max-width:500px;margin:auto;background:#fff;padding:2rem;border-radius:1rem;box-shadow:0 4px 16px rgba(0,0,0,0.06);animation:fadeInUp 1s;">
-                            <div class="testimonial-content">
-                                <i class="fas fa-quote-left" style="color:#E67E22;font-size:1.5rem;"></i>
-                                <p>We partnered with Advi Systems for a full website redesign and couldn't be happier. The animations and user experience are world-class, and our customers love the new look!</p>
-                            </div>
-                            <div class="testimonial-author" style="display:flex;align-items:center;gap:1rem;margin-top:1.5rem;">
-                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya Patel, Head of Digital, RetailX" style="width:48px;height:48px;border-radius:50%;object-fit:cover;">
-                                <div>
-                                    <h4 style="margin:0;font-size:1.1rem;">Priya Patel</h4>
-                                    <p style="margin:0;color:#888;font-size:0.95rem;">Head of Digital, RetailX</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="testimonial-card" style="max-width:500px;margin:auto;background:#fff;padding:2rem;border-radius:1rem;box-shadow:0 4px 16px rgba(0,0,0,0.06);animation:fadeInUp 1.2s;">
-                            <div class="testimonial-content">
-                                <i class="fas fa-quote-left" style="color:#E67E22;font-size:1.5rem;"></i>
-                                <p>Advi Systems' cybersecurity team gave us peace of mind. Their proactive monitoring and quick response have protected our business from several threats already.</p>
-                            </div>
-                            <div class="testimonial-author" style="display:flex;align-items:center;gap:1rem;margin-top:1.5rem;">
-                                <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="David Kim, COO, FinSecure" style="width:48px;height:48px;border-radius:50%;object-fit:cover;">
-                                <div>
-                                    <h4 style="margin:0;font-size:1.1rem;">David Kim</h4>
-                                    <p style="margin:0;color:#888;font-size:0.95rem;">COO, FinSecure</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <div class="container">
+            <h2>Why Choose ADVI Systems?</h2>
+            <div class="reasons-grid">
+                <div class="reason"><i class="fas fa-bolt"></i> Lightning-fast delivery & support</div>
+                <div class="reason"><i class="fas fa-brain"></i> AI-powered innovation in every project</div>
+                <div class="reason"><i class="fas fa-shield-alt"></i> Enterprise-grade security, always</div>
+                <div class="reason"><i class="fas fa-star"></i> 5-star rated by clients worldwide</div>
             </div>
         </div>
     </section>
@@ -390,8 +462,7 @@
     </footer>
 
     <div class="nav-overlay"></div>
-    <script src="../script.js"></script>
-    <script src="services.js"></script>
+    <script src="main.js"></script>
     <script src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>
     <script>
         AOS.init({
