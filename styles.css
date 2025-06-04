@@ -220,6 +220,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-content {
     max-width: 600px;
+    margin-top: 2.5rem;
 }
 
 .hero h1 {
@@ -325,6 +326,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     width: 100%;
     height: 100%;
+    min-height: 400px;
 }
 
 .parallax-image {
@@ -338,15 +340,27 @@ h1, h2, h3, h4, h5, h6 {
 
 .floating-card {
     position: absolute;
-    background: white;
+    max-width: 220px;
+    min-width: 160px;
+    background: rgba(255,255,255,0.82);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 12px 36px 0 rgba(0,51,102,0.13), 0 2px 16px rgba(230,103,34,0.10);
+    border: 1.5px solid rgba(255,255,255,0.25);
+    transition: box-shadow 0.3s, transform 0.3s;
     padding: 1rem;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     display: flex;
     align-items: center;
     gap: 0.5rem;
     font-weight: 600;
     color: #003366;
+    animation: floatCard 4s ease-in-out infinite alternate;
+}
+
+.floating-card:hover {
+    box-shadow: 0 0 32px 8px var(--accent, #E67E22), 0 24px 64px 0 rgba(230,103,34,0.18), 0 8px 32px rgba(0,51,102,0.18);
+    transform: scale(1.22) !important;
+    z-index: 10;
 }
 
 .floating-card i {
@@ -355,15 +369,83 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card1 {
-    top: 20%;
-    right: -20px;
-    transform: rotate(5deg);
+    top: 6%;
+    left: 4%;
+    z-index: 3;
+    transform: scale(1.08) rotate(-8deg);
+    animation: floatCard1 4.2s ease-in-out infinite alternate;
 }
 
 .card2 {
-    bottom: 20%;
-    left: -20px;
-    transform: rotate(-5deg);
+    top: 12%;
+    right: 6%;
+    z-index: 3;
+    transform: scale(1.05) rotate(10deg);
+    animation: floatCard2 4.6s ease-in-out infinite alternate;
+}
+
+.card3 {
+    bottom: 8%;
+    left: 10%;
+    z-index: 4;
+    transform: scale(1.12) rotate(-6deg);
+    animation: floatCard3 4.1s ease-in-out infinite alternate;
+}
+
+.card4 {
+    bottom: 10%;
+    right: 12%;
+    z-index: 4;
+    transform: scale(1.09) rotate(7deg);
+    animation: floatCard4 4.8s ease-in-out infinite alternate;
+}
+
+.card5 {
+    top: 60%;
+    left: 55%;
+    transform: scale(1.15) rotate(2deg);
+    z-index: 5;
+    animation: floatCard5 4.3s ease-in-out infinite alternate;
+}
+
+.hero-subheadline {
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+    background: linear-gradient(90deg, #003366 60%, #E67E22 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s 0.3s forwards;
+    letter-spacing: 0.01em;
+}
+
+@keyframes floatCard1 {
+    0% { transform: translateY(0) translateX(0) scale(1) rotate(7deg); }
+    100% { transform: translateY(-18px) translateX(10px) scale(1.04) rotate(7deg); }
+}
+
+@keyframes floatCard2 {
+    0% { transform: translateY(0) translateX(0) scale(0.97) rotate(-8deg); }
+    100% { transform: translateY(-12px) translateX(-12px) scale(1.01) rotate(-8deg); }
+}
+
+@keyframes floatCard3 {
+    0% { transform: translateY(0) translateX(0) scale(1.08) rotate(4deg); }
+    100% { transform: translateY(-22px) translateX(8px) scale(1.13) rotate(4deg); }
+}
+
+@keyframes floatCard4 {
+    0% { transform: translateY(0) translateX(0) scale(1.01) rotate(-6deg); }
+    100% { transform: translateY(-16px) translateX(-10px) scale(1.07) rotate(-6deg); }
+}
+
+@keyframes floatCard5 {
+    0% { transform: translateY(0) translateX(0) scale(1.15) rotate(2deg); }
+    100% { transform: translateY(-14px) translateX(12px) scale(1.19) rotate(2deg); }
 }
 
 /* Services Section */
@@ -751,6 +833,7 @@ h1, h2, h3, h4, h5, h6 {
     
     .hero-content {
         max-width: 100%;
+        margin-top: 1.2rem;
     }
     
     .hero-buttons {
@@ -760,6 +843,12 @@ h1, h2, h3, h4, h5, h6 {
     .hero-image {
         margin-top: 2rem;
     }
+    
+    .card1 { top: 8%; left: 2%; }
+    .card2 { bottom: 8%; left: 4%; }
+    .card3 { top: 18%; right: 4%; }
+    .card4 { bottom: 6%; right: 6%; }
+    .card5 { top: 60%; right: 18%; }
 }
 
 @media (max-width: 768px) {
@@ -772,7 +861,8 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .floating-card {
-        display: none;
+        padding: 0.7rem 1rem;
+        font-size: 0.98rem;
     }
 
     .nav-links {
@@ -815,6 +905,14 @@ h1, h2, h3, h4, h5, h6 {
     .card-content {
         padding: 2rem;
     }
+    
+    .card1 { top: 4%; left: 2%; }
+    .card2 { bottom: 4%; left: 2%; }
+    .card3 { top: 10%; right: 2%; }
+    .card4 { bottom: 2%; right: 2%; }
+    .card5 { top: 70%; right: 8%; }
+    .hero-content { margin-top: 0.5rem; }
+    .hero-subheadline { font-size: 1.2rem; margin-bottom: 1rem; }
 }
 
 /* Testimonials Section */
@@ -1249,4 +1347,54 @@ h1, h2, h3, h4, h5, h6 {
 .popup-info p {
     color: #6b7280;
     font-size: 1rem;
+}
+
+.floating-card.hero-badge {
+    top: 38%;
+    left: 50%;
+    transform: translateX(-50%) scale(1.18) rotate(-2deg);
+    z-index: 10;
+    font-size: 1.25rem;
+    font-weight: 800;
+    padding: 1.2rem 2.2rem;
+    border: 2.5px solid;
+    border-image: linear-gradient(90deg, #003366 60%, #E67E22 100%) 1;
+    background: rgba(255,255,255,0.95);
+    color: #003366;
+    box-shadow: 0 0 32px 8px #e67e22, 0 24px 64px 0 rgba(230,103,34,0.10);
+    animation: floatHeroBadge 4.5s ease-in-out infinite alternate;
+}
+
+.floating-card.hero-badge:hover {
+    box-shadow: 0 0 48px 16px #E67E22, 0 32px 80px 0 rgba(230,103,34,0.18);
+    background: #fffbe6;
+    color: #E67E22;
+    border-image: linear-gradient(90deg, #E67E22 60%, #003366 100%) 1;
+}
+
+@keyframes floatHeroBadge {
+    0% { transform: translateX(-50%) scale(1.18) rotate(-2deg); }
+    100% { transform: translateX(-50%) translateY(-18px) scale(1.22) rotate(2deg); }
+}
+
+.floating-card.central-badge {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1.22) rotate(-2deg);
+    z-index: 10;
+    min-width: 260px;
+    max-width: 340px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #fff 60%, #f7e6d2 100%);
+    color: #003366;
+    box-shadow: 0 0 32px 8px #E67E22, 0 24px 64px 0 rgba(230,103,34,0.18), 0 8px 32px rgba(0,51,102,0.18);
+    border: 2.5px solid rgba(230,126,34,0.18);
+    letter-spacing: 0.01em;
+    animation: floatCentralBadge 5s ease-in-out infinite alternate;
+}
+
+@keyframes floatCentralBadge {
+    0% { transform: translate(-50%, -50%) scale(1.22) rotate(-2deg); }
+    100% { transform: translate(-50%, -56%) scale(1.26) rotate(2deg); }
 }
